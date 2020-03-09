@@ -35,13 +35,9 @@
 
 int main() {
 	std::vector<int> integer;
-	std::cout << "capacity1:" << integer.max_size() << std::endl;
-	int number;
-	std::cin >> number;
-	for (int i = 0; i < number; i++) {
-		integer.push_back(0);
-	}
-	std::cout << "capacity2:" << integer.capacity() << std::endl;
+	std::cout << "max_capacity:" << integer.max_size() << std::endl;
+	integer.reserve(1000000000);
+	std::cout << "reserved_cap:" << integer.capacity() << std::endl;
 	system("pause");
 	return 0;
 }
